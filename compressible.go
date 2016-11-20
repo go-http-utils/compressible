@@ -17,14 +17,14 @@ func init() {
 }
 
 // Version is this package's version
-const Version = "0.1.1"
+const Version = "0.1.2"
 
 var compressibleTypeRegExp = regexp.MustCompile(`^text\/|\+json$|\+text$|\+xml$`)
 
 // Test checks whether the given contentType is compressible, using
 // https://github.com/GitbookIO/mimedb as mime database. All types that not in
-// mimedb but have the scheme of "text/*", "*/*+json", "*/*+text", "*/*+xml" are
-// considered as compressible.
+// mimedb but have the scheme of "text/*", "*/*+json", "*/*+text" and "*/*+xml"
+// are considered as compressible.
 func Test(contentType string) bool {
 	dbMatched := false
 

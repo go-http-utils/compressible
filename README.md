@@ -2,7 +2,7 @@
 [![Build Status](https://travis-ci.org/go-http-utils/compressible.svg?branch=master)](https://travis-ci.org/go-http-utils/compressible)
 [![Coverage Status](https://coveralls.io/repos/github/go-http-utils/compressible/badge.svg?branch=master)](https://coveralls.io/github/go-http-utils/compressible?branch=master)
 
-MIME type compressible checking for Go
+MIME compressible checking for Go
 
 ## Installation
 
