@@ -22,7 +22,10 @@ func (s CompressibleSuite) TestInvalidType() {
 }
 
 func (s CompressibleSuite) TestMatchScheme() {
-	s.True(Test("text/foobar"))
+	s.True(Test("Text/foobar"))
+	s.True(Test("foo/bar+jsON"))
+	s.True(Test("foo/bar+texT"))
+	s.True(Test("foo/bar+xml"))
 }
 
 func TestCompressible(t *testing.T) {

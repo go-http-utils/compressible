@@ -17,9 +17,9 @@ func init() {
 }
 
 // Version is this package's version
-const Version = "0.1.2"
+const Version = "0.2.0"
 
-var compressibleTypeRegExp = regexp.MustCompile(`^text\/|\+json$|\+text$|\+xml$`)
+var compressibleTypeRegExp = regexp.MustCompile(`(?i)^text\/|\+json$|\+text$|\+xml$`)
 
 // Test checks whether the given contentType is compressible, using
 // https://github.com/GitbookIO/mimedb as mime database. All types that not in
