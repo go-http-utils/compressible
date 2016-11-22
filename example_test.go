@@ -3,6 +3,7 @@ package compressible_test
 import (
 	"fmt"
 
+	_ "github.com/GitbookIO/mimedb/autoload"
 	"github.com/go-http-utils/compressible"
 )
 

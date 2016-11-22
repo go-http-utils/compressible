@@ -7,24 +7,17 @@ import (
 	"github.com/GitbookIO/mimedb"
 )
 
-func init() {
-	// ensure all extensions and their associated content type of "mimedb" package
-	// are stored in "mime" package, ignore the potential returned error of
-	// mime.AddExtensionType.
-	for ext, mimeEntry := range mimedb.DB {
-		mime.AddExtensionType("."+ext, mimeEntry.ContentType)
-	}
-}
-
 // Version is this package's version
-const Version = "0.2.0"
+const Version = "0.3.0"
 
 var compressibleTypeRegExp = regexp.MustCompile(`(?i)^text\/|\+json$|\+text$|\+xml$`)
 
 // Test checks whether the given contentType is compressible, using
-// https://github.com/GitbookIO/mimedb as mime database. All types that not in
-// mimedb but have the scheme of "text/*", "*/*+json", "*/*+text" and "*/*+xml"
-// are considered as compressible.
+// https://github.com/GitbookIO/mimedb as mime database.Recommand to autoload
+// all extensions and their associated content type by
+// `import _ "github.com/GitbookIO/mimedb/autoload"` first. All types that not
+// in mimedb but have the scheme of "text/*", "*/*+json", "*/*+text" and
+// "*/*+xml" are considered as compressible.
 func Test(contentType string) bool {
 	dbMatched := false
 

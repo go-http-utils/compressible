@@ -4,6 +4,7 @@ import (
 	"testing"
 
 	"github.com/GitbookIO/mimedb"
+	_ "github.com/GitbookIO/mimedb/autoload"
 	"github.com/stretchr/testify/suite"
 )
 

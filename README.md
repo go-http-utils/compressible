@@ -18,6 +18,7 @@ API documentation can be found here: https://godoc.org/github.com/go-http-utils/
 
 ```go
 import (
+  _ "github.com/GitbookIO/mimedb/autoload"
   "github.com/go-http-utils/compressible"
 )
 ```
